@@ -33,7 +33,9 @@ export default function NavBar() {
       h-full shadow-lg bg-background border-primary border-r
       flex-col justify-start items-center space-y-4 select-none`}
       >
-        <h1 className="text-foreground text-lg pt-4">Nathan's Dev tools</h1>
+        <h1 className="text-foreground text-lg pt-4">
+          <Link to={"/"}>Nathan's Dev tools</Link>
+        </h1>
         <Separator />
         <Input
           className="w-4/5 focus-visible:ring-transparent"
@@ -42,6 +44,9 @@ export default function NavBar() {
         <div className="h-full">
           <Button asChild variant="link" className="text-lg">
             <Link to={"/hex-to-text"}>Hex to Text</Link>
+          </Button>
+          <Button asChild variant="link" className="text-lg">
+            <Link to={"/base64"}>Base64 Encoder/Decoder</Link>
           </Button>
         </div>
 

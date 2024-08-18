@@ -9,6 +9,7 @@ import MainView from "./layout/Main";
 import NotFoundLayout from "./layout/NotFound";
 
 import HexToText from "./packages/hex-to-text";
+import Base64EncodeDecode from "./packages/base64";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
     children: [
       { path: "", element: <Homepage /> },
       { path: "hex-to-text", element: <HexToText /> },
+      { path: "base64", element: <Base64EncodeDecode /> },
       { path: "*", element: <NotFoundLayout /> },
     ],
   },
