@@ -8,6 +8,8 @@ import Homepage from "./layout/Homepage";
 import MainView from "./layout/Main";
 import NotFoundLayout from "./layout/NotFound";
 
+import HexToText from "./packages/hex-to-text";
+
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
@@ -16,6 +18,7 @@ const router = createBrowserRouter([
     element: <MainView />,
     children: [
       { path: "", element: <Homepage /> },
+      { path: "hex-to-text", element: <HexToText /> },
       { path: "*", element: <NotFoundLayout /> },
     ],
   },

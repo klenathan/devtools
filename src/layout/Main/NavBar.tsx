@@ -41,7 +41,7 @@ export default function NavBar() {
         />
         <div className="h-full">
           <Button asChild variant="link" className="text-lg">
-            <Link to={"/hex-to-text"}>Hex to text</Link>
+            <Link to={"/hex-to-text"}>Hex to Text</Link>
           </Button>
         </div>
 
