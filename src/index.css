@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animate-text-gradient {
+    background-size: 450%;
+    -webkit-animation: animatedgradient 5s ease infinite alternate;
+    -moz-animation: animatedgradient 5s ease infinite alternate;
+    animation: animatedgradient 5s ease infinite alternate;
+}
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 100% 0%;
+    }
+
+    25% {
+        background-position: 100% 100%;
+    }
+
+    50% {
+        background-position: 0% 100%;
+    }
+
+    75% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+
+
+@layer base {
+    h1 {
+        @apply text-3xl;
+        @apply font-bold
+    }
+
+    h2 {
+        @apply text-2xl;
+        @apply font-bold
+    }
+
+    .markdown_viewer {
+        @apply space-y-4
+    }
+
+    .markdown_viewer h3 {
+        @apply text-2xl font-bold py-1;
+    }
+
+    .markdown_viewer h4 {
+        @apply text-xl font-bold;
+    }
+
+    .CollapsibleContent[data-state="open"] {
+        animation: slideDown 200ms ease-out;
+    }
+
+    .CollapsibleContent[data-state="closed"] {
+        animation: slideUp 150ms ease-out;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 10%;
+            transform: translateY(-.5rem);
+        }
+    }
+
+    @keyframes slideUp {
+        to {
+            opacity: 0%;
+            transform: translateY(-.5rem);
+        }
+    }
+
+    @layer base {
+        :root {
+            --background: 0 0% 100%;
+            /* hsl(0, 0%, 100%) */
+            --foreground: 240 10% 3.9%;
+            /* hsl(240, 10%, 3.9%) */
+            --card: 0 0% 100%;
+            /* hsl(0, 0%, 100%) */
+            --card-foreground: 240 10% 3.9%;
+            /* hsl(240, 10%, 3.9%) */
+            --popover: 0 0% 100%;
+            /* hsl(0, 0%, 100%) */
+            --popover-foreground: 240 10% 3.9%;
+            /* hsl(240, 10%, 3.9%) */
+            --primary: 142.1 76.2% 36.3%;
+            /* hsl(142.1, 76.2%, 36.3%) */
+            --primary-foreground: 355.7 100% 97.3%;
+            /* hsl(355.7, 100%, 97.3%) */
+            --secondary: 240 4.8% 95.9%;
+            /* hsl(240, 4.8%, 95.9%) */
+            --secondary-foreground: 240 5.9% 10%;
+            /* hsl(240, 5.9%, 10%) */
+            --muted: 240 4.8% 95.9%;
+            /* hsl(240, 4.8%, 95.9%) */
+            --muted-foreground: 240 3.8% 46.1%;
+            /* hsl(240, 3.8%, 46.1%) */
+            --accent: 240 4.8% 95.9%;
+            /* hsl(240, 4.8%, 95.9%) */
+            --accent-foreground: 240 5.9% 10%;
+            /* hsl(240, 5.9%, 10%) */
+            --destructive: 0 84.2% 60.2%;
+            /* hsl(0, 84.2%, 60.2%) */
+            --destructive-foreground: 0 0% 98%;
+            /* hsl(0, 0%, 98%) */
+            --border: 240 5.9% 90%;
+            /* hsl(240, 5.9%, 90%) */
+            --input: 240 5.9% 90%;
+            /* hsl(240, 5.9%, 90%) */
+            --ring: 142.1 76.2% 36.3%;
+            /* hsl(142.1, 76.2%, 36.3%) */
+
+            --radius: 0.5rem;
+        }
+
+        .dark {
+            --background: 20 14.3% 4.1%;
+            --foreground: 0 0% 95%;
+            --card: 24 9.8% 10%;
+            --card-foreground: 0 0% 95%;
+            --popover: 0 0% 9%;
+            --popover-foreground: 0 0% 95%;
+            --primary: 142.1 70.6% 45.3%;
+            --primary-foreground: 144.9 80.4% 10%;
+            --secondary: 240 3.7% 15.9%;
+            --secondary-foreground: 0 0% 98%;
+            --muted: 0 0% 15%;
+            --muted-foreground: 240 5% 64.9%;
+            --accent: 12 6.5% 15.1%;
+            --accent-foreground: 0 0% 98%;
+            --destructive: 0 62.8% 30.6%;
+            --destructive-foreground: 0 85.7% 97.3%;
+            --border: 240 3.7% 15.9%;
+            --input: 240 3.7% 15.9%;
+            --ring: 142.4 71.8% 29.2%;
+        }
+    }
+
+
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+
+}
